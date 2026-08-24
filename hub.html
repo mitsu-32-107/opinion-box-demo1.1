@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>学友会 意見箱システム（デモ公開用）</title>
+  <style>
+    :root { 
+      --student: #2563eb; 
+      --admin: #0f172a; 
+      --staff: #047857;
+      --bg: #f8fafc;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: #1e293b;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 500px;
+      width: 90%;
+      background: #ffffff;
+      padding: 30px 20px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      text-align: center;
+      margin: 20px 0;
+    }
+    h1 {
+      font-size: 1.4rem;
+      color: #0f172a;
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+    p.desc {
+      font-size: 0.9rem;
+      color: #64748b;
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+    
+    .link-card {
+      display: block;
+      text-decoration: none;
+      padding: 16px;
+      border-radius: 12px;
+      margin-bottom: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .link-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .link-card span {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: normal;
+      margin-top: 4px;
+      opacity: 0.9;
+    }
+
+    .btn-student { background-color: var(--student); }
+    .btn-admin { background-color: var(--admin); }
+    .btn-staff { background-color: var(--staff); }
+
+    .demo-info {
+      background-color: #f1f5f9;
+      border: 1px solid #e2e8f0;
+      padding: 16px;
+      border-radius: 8px;
+      margin-top: 24px;
+      text-align: left;
+      font-size: 0.85rem;
+      color: #334155;
+    }
+    .demo-info strong {
+      color: #ef4444;
+    }
+    .demo-info ul {
+      margin: 8px 0 0;
+      padding-left: 20px;
+    }
+    .demo-info li {
+      margin-bottom: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>意見箱システム デモポータル</h1>
+    <p class="desc">
+      本日はコンペティションをご覧いただきありがとうございます。<br>
+      以下のボタンから、各権限のデモ画面を体験できます。
+    </p>
+
+    <!-- ★ 同じフォルダにファイルがある想定のリンクです -->
+    <a href="index.html" class="link-card btn-student">
+      👤 学生用ポータル
+      <span>意見の投稿・公開された回答の閲覧</span>
+    </a>
+
+    <a href="admin.html" class="link-card btn-admin">
+      🛡 厚生部 管理ダッシュボード
+      <span>全意見の集約・ステータス管理・公開設定</span>
+    </a>
+
+    <a href="staff.html" class="link-card btn-staff">
+      🏢 教職員用 回答ダッシュボード
+      <span>大学側へ割り振られた意見への回答作成</span>
+    </a>
+
+    <div class="demo-info">
+      <strong>【審査員・体験者の方へ】</strong><br>
+      管理画面の各種アクション（送信や公開など）を実行するには、以下のデモ用PINコードを入力してください。
+      <ul>
+        <li>厚生部長 権限PIN： <strong>1234</strong></li>
+        <li>執行委員会幹部 権限PIN： <strong>5678</strong></li>
+      </ul>
+      ※データはお使いのブラウザ内（ローカル）にのみ保存されます。
+    </div>
+  </div>
+
+</body>
+</html>
